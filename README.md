@@ -1,18 +1,16 @@
 # Projeto-Web
-    ## Estruturação do Projeto
-        #### Essa estrutura de projeto HTML é organizada em pastas para facilitar a manutenção e a escalabilidade, tornando o projeto mais fácil de gerenciar e expandir. Cada funcionalidade recebe um conjunto de pastas: Assets, Components e pages
 
-            * assets/: Esta pasta contém todos os recursos usados no projeto, como estilos, fontes, ícones, imagens e scripts JavaScript. A divisão em subpastas facilita a organização de cada tipo de arquivo.
-                > css/: Aqui ficam os arquivos CSS que definem o estilo do projeto.
+## Estruturação do Projeto
 
-                > fonts/: Contém as fontes customizadas utilizadas no site, como arquivos .woff ou .ttf
+A estrutura deste projeto HTML é organizada para facilitar a manutenção e a escalabilidade, tornando o desenvolvimento mais fácil de gerenciar e expandir. As funcionalidades são distribuídas nas seguintes pastas principais: **assets/**, **components/** e **pages/**.
 
-                > icons/: Para ícones, pode-se incluir arquivos CSS que carregam ícones ou fontes de ícones 
+- **assets/**: Contém todos os recursos utilizados no projeto, organizados em subpastas para cada tipo de arquivo:
+  - **css/**: Arquivos CSS que definem o estilo do projeto.
+  - **fonts/**: Fontes customizadas utilizadas no site, como arquivos `.woff` ou `.ttf`.
+  - **icons/**: Arquivos CSS para ícones ou fontes de ícones.
+  - **images/**: Imagens usadas no site, como logotipos e favicon.
+  - **js/**: Scripts JavaScript que adicionam funcionalidades ao site.
 
-                > Armazena as imagens usadas no site, como logotipos e favicons.
+- **components/**: Armazena componentes reutilizáveis, como cabeçalho, rodapé e menus. Cada componente é um arquivo HTML, o que facilita a reutilização em diferentes partes do site.
 
-                > js/: Contém os scripts JavaScript do projeto.
-
-            * components/: Essa pasta é destinada a armazenar componentes reutilizáveis do site. Cada componente pode ser um arquivo HTML que representa uma parte da interface, como um menu, cabeçalho, rodapé, entre outros. Essa organização é útil para projetos maiores onde partes da página são reutilizadas em várias seções.
-
-            * pages/: Armazena as diferentes páginas do site. Se o site tem várias seções, cada uma pode ser organizada em uma subpasta específica, como about/ para a página "Sobre" e contact/ para a página de "Contato".
+- **pages/**: Contém as diferentes páginas do site, organizadas em subpastas por seção (ex.: **about/** para "Sobre" e **contact/** para "Contato"), além da página inicial **index.html**.
