@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Define o idioma do conteúdo como português do Brasil -->
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Ajusta a visualização para dispositivos móveis, garantindo que a largura da página se ajuste ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define um ícone (favicon) que será exibido na aba do navegador ao lado do título da página -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Título que será exibido na aba do navegador -->
+    <title>Profundo</title>
+</head>
+<body>
+    <!-- Menu de navegação com um link para a página inicial -->
+    <ul>
+        <li><a href="../pages/index.html" target="_self" rel="prev">Home</a></li>
+    </ul>
+    
+    <!-- Cabeçalho principal da página -->
+    <h1>Os Sete da Vought</h1>
+    
+    <!-- Elemento <picture> para fornecer diferentes imagens dependendo da largura da tela -->
+    <picture>
+        <!-- Fonte de imagem que será usada para telas de até 700px de largura -->
+        <source media="(max-width: 700px)" srcset="../assets/images/seven-p.jpg" type="image/jpg">
+        <!-- Fonte de imagem que será usada para telas de até 1050px de largura -->
+        <source media="(max-width: 1050px)" srcset="../assets/images/seven-m.jpg" type="image/jpg">
+        <!-- Imagem padrão caso nenhuma das condições anteriores seja atendida -->
+        <img src="../assets/images/seven.jpg" alt="Os Sete">
+    </picture>
+    
+    <!-- Lista não ordenada com os membros do grupo "Os Sete" -->
+    <ul>
+        <li>Capitão Pátria</li>
+        <li>Luz-Estrela</li>
+        <!-- Link para uma imagem do personagem Profundo -->
+        <li><a href="https://i.ytimg.com/vi/Kqr_i55DTxI/sddefault.jpg" target="_blank" rel="external">Profundo</a></li>
+        <li>Tempesta</li>
+        <li>Black Noir</li>
+        <li>Rainha Maeve</li>
+        <li>Trem-Bala</li>
+    </ul>
+</body>
+</html>
