@@ -1,0 +1,32 @@
+/* Define a cor de fundo da página como um tom de dourado escuro */
+body {
+    background-color: darkgoldenrod;
+}
+
+/* Estiliza o título principal (h1) */
+h1 {
+    /* Define a cor do texto como branco */
+    color: white;
+    /* Centraliza o texto na página */
+    text-align: center;
+    /* Define o tamanho da fonte como 2em (em relação ao tamanho da fonte padrão) */
+    font-size: 2em;
+    /* Define uma lista de fontes, priorizando Arial e Helvetica, e usa sans-serif como alternativa padrão */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estiliza o elemento de áudio */
+audio {
+    /* Define o elemento para ocupar a largura inteira em uma linha própria */
+    display: block;
+    /* Centraliza o elemento horizontalmente */
+    margin: 0 auto;
+}
+
+/* Estiliza o elemento de vídeo (iframe) */
+iframe {
+    /* Define o elemento para ocupar a largura inteira em uma linha própria */
+    display: block;
+    /* Centraliza o elemento horizontalmente */
+    margin: 0 auto;
+}

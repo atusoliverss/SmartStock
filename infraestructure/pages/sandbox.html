@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Define o idioma do conteúdo como português do Brasil -->
+<head>
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Ajusta a visualização para dispositivos móveis, garantindo que a largura da página se ajuste ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define um ícone (favicon) que será exibido na aba do navegador ao lado do título da página -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <!-- Inclui o arquivo CSS externo para estilizar a página -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Título que será exibido na aba do navegador -->
+    <title>SandBox</title>
+</head>
+<body>
+    <!-- Título principal da página -->
+    <h1>Tente não chorar com esse áudio</h1>
+    
+    <!-- Elemento <audio> para reproduzir um áudio com opções de controle (play, pause) -->
+    <audio preload="auto" controls autoplay>
+        <!-- Fonte do áudio no formato MP3, compatível com a maioria dos navegadores -->
+        <source src="../assets/midia/lasflaw.mp3" type="audio/mpeg">
+        <!-- Fonte do áudio no formato OGG, uma alternativa para compatibilidade -->
+        <source src="../assets/midia/lasflaw.ogg" type="audio/ogg">
+        <!-- Fonte do áudio no formato WAV, outra opção para compatibilidade -->
+        <source src="../assets/midia/lasflaw.wav" type="audio/wav">
+        <!-- Mensagem para navegadores que não suportam o elemento <audio> -->
+        <p>Seu navegador não é compatível com o áudio. <a href="../assets/midia/lasflaw.mp3" download="lasflaw.mp3" type="audio/mpeg">Baixe o áudio aqui</a></p>
+    </audio>
+    
+    <!-- Segundo título da página -->
+    <h1>Mas quem é Lasflaw?</h1>
+    
+    <!-- Elemento <iframe> para incorporar um vídeo do YouTube sobre "Lasflaw" -->
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/pd3RUlwNp6M?si=iEZiWhvBQm0P9taA" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</body>
+</html>
