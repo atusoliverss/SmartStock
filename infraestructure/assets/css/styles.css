@@ -1,6 +1,7 @@
 /* Define a cor de fundo da página como um tom de dourado escuro */
+
 body {
-    background-color: darkgoldenrod;
+    background-color: #34495E;
 }
 
 /* Estiliza o título principal (h1) */
@@ -11,6 +12,13 @@ h1 {
     text-align: center;
     /* Define o tamanho da fonte como 2em (em relação ao tamanho da fonte padrão) */
     font-size: 2em;
+    /* Define uma lista de fontes, priorizando Arial e Helvetica, e usa sans-serif como alternativa padrão */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    /* Centraliza o texto na página */
+    text-align: center;
     /* Define uma lista de fontes, priorizando Arial e Helvetica, e usa sans-serif como alternativa padrão */
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -29,4 +37,11 @@ iframe {
     display: block;
     /* Centraliza o elemento horizontalmente */
     margin: 0 auto;
+}
+
+.img_index{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
