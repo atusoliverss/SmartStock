@@ -7,22 +7,54 @@
     <!-- Ajusta a visualização para dispositivos móveis, garantindo que a largura da página se ajuste ao tamanho da tela -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título que será exibido na aba do navegador -->
-    <title>Profundo</title>
+    <title>SmartStock</title>
     <!-- Define um ícone (favicon) que será exibido na aba do navegador ao lado do título da página -->
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/logo_icon.ico" type="image/x-icon">
     <!-- Inclui o arquivo CSS externo para estilizar a página -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-    <!-- Cabeçalho principal da página -->
-    <h1>Aqui nasce um grande projeto</h1>
-    <!-- Parágrafo com um link para outra página (atividade-3.html), que abrirá na mesma janela -->
-    <p><a href="../pages/atividade-3.html" target="_self" rel="next">Clique aqui se tivar coragem</a></p>
-    <!-- Parágrafo com um link para outra página (sandbox.html), que abrirá na mesma janela -->
-    <p><a href="../pages/sandbox.html" target="_self" rel="next">SandBox</a></p>
-    <h1>Paleta de Cores</h1>
-    <!-- Imagem com uma referência para um arquivo externo (AdobeColor-Palleta Projeto.jpeg) -->
-    <img class="img_index" src="../assets/images/AdobeColor-Palleta Projeto.jpeg" alt="Paleta de Cor">
+    <header>
+        <!-- Contêiner para o logotipo do site -->
+        <div class="logo-container">
+            <!-- Imagem do logotipo, com a classe 'logo' para possíveis estilos -->
+            <img class="logo" src="../assets/images/logo_icon.png" alt="logo">
+        </div>
+        <!-- Nome do site com um link para a página inicial -->
+        <span><a href="../pages/index.html">SmartStock</a></span>
+        <!-- Lista não ordenada para opções de login e cadastro -->
+        <ul>
+            <li>
+                <a class="a_login_cadastro" href="" target="_self" rel="next">olá, faça seu login ou cadastre-se</a>
+            </li>
+        </ul>
+    </header>
+    
+    <!-- Menu de navegação principal do site -->
+    <nav>
+        <ul>
+            <!-- Link para a página inicial -->
+            <li><a href="../pages/index.html" target="_self" rel="prev">Home</a></li>
+            <!-- Link para a página "Profundo" -->
+            <li><a href="../pages/atividade-3.html" target="_self" rel="prev">Profundo</a></li>
+            <!-- Link para a página "SandBox" -->
+            <li><a href="../pages/sandbox.html" target="_self" rel="prev">SandBox</a></li>
+            <!-- Links adicionais para as páginas "SandBox" e "Profundo" (talvez repetidos para teste) -->
+            <li><a href="../pages/sandbox.html" target="_self" rel="prev">SandBox</a></li>
+            <li><a href="../pages/atividade-3.html" target="_self" rel="prev">Profundo</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Título principal da seção de conteúdo -->
+        <h1>Paleta de Cores</h1>
+        <!-- Imagem que exibe a paleta de cores do projeto -->
+        <img class="img_index" src="../assets/images/AdobeColor-Palleta Projeto.jpeg" alt="Paleta de Cor">
+    </main>
+    
+    <!-- Rodapé com uma mensagem de direitos autorais -->
+    <footer>Todos os direitos reservados</footer>
     
 </body>
 </html>
