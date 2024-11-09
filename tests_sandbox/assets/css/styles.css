@@ -25,6 +25,18 @@ p {
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
 }
 
+/* Estiliza o elemento de áudio */
+audio {
+    display: block; /* Ocupa uma linha própria */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+/* Estiliza o elemento de vídeo (iframe) */
+iframe {
+    display: block; /* Ocupa uma linha própria */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
 /* Estiliza a imagem da classe img_index */
 .img_index {
     display: block; /* Ocupa uma linha própria */
@@ -49,25 +61,65 @@ header {
     align-items: center;
 }
 
+/* Responsividade para a logo */
 .logo {
-    width: 80px; /* Tamanho da logo */
-    margin: -10px;
+    width: 80px;
+    margin: -5px;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        width: 60px; /* Ajuste a largura em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px; /* Ajuste adicional para telas bem pequenas */
+    }
+}
+
+/* Responsividade para o nome do sistema */
 .system-name {
     font-size: 1.8em;
     color: #fff;
 }
 
-/* Estilo do link de cadastro */
+@media (max-width: 768px) {
+    .system-name {
+        font-size: 1.5em; /* Reduz o tamanho em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .system-name {
+        font-size: 1.2em; /* Reduz ainda mais em telas pequenas */
+    }
+}
+
+/* Responsividade para o link de cadastro do usuário */
 .user-signup {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
-    &:hover {
-        text-decoration: underline;
+}
+
+.user-signup:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .user-signup {
+        padding: 8px 12px; /* Ajuste do padding em telas menores */
     }
 }
+
+@media (max-width: 480px) {
+    .user-signup {
+        padding: 6px 10px; /* Ajuste adicional em telas pequenas */
+    }
+}
+
 
 /* Estilos para o menu de navegação */
 nav#menu {
