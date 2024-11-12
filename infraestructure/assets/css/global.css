@@ -1,0 +1,201 @@
+/* Define as margens, preenchimentos e box-sizing para todos os elementos e seus pseudoelementos */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define variáveis CSS globais para cores, fontes, e espaçamentos */
+:root {
+    --color-dark-blue: #2b3d4f;
+    --color-light-blue: #3d566e;
+    --color-gray: #BDC3C7;
+    --color-light-gray: #ecf0f1;
+    --color-medium-gray: #95a5a6;
+    --color-blue: #3498DB;
+    
+    --font-primary: 'Arial', sans-serif;
+    --font-size-base: 16px;
+}
+
+/* Estilos globais para o corpo da página */
+body {
+    font-size: var(--font-size-base); /* Define o tamanho da fonte base */
+    color: white; /* Cor do texto */
+    background-color: var(--color-light-gray); /* Cor de fundo */
+    font-family: var(--font-primary); /* Fonte primária */
+}
+
+/* Define a altura total para o corpo e o HTML e usa flexbox */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+    flex: 1;
+    margin-bottom: -10px;
+}
+
+/* Estilo para o container centralizado */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Estilos para títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--color-dark-blue);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Estilos para parágrafos */
+p {
+    margin-bottom: var(--spacing-small);
+    line-height: 1.6;
+}
+
+/* Estilos para links */
+a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+}
+
+/* Efeito de hover para links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    background-color: #2b3d4f;
+}
+
+/* Estilos para o container da logo */
+div#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para o link da logo */
+div#logo-container a {
+    text-decoration: none;
+}
+
+/* Estilo responsivo para a logo */
+.logo {
+    width: 80px;
+    margin: -5px;
+}
+
+/* Ajustes responsivos para a logo em telas menores */
+@media (max-width: 768px) {
+    .logo {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 50px;
+    }
+}
+
+/* Estilos para o nome do sistema */
+.system-name {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+/* Ajustes responsivos para o nome do sistema em telas menores */
+@media (max-width: 768px) {
+    .system-name {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .system-name {
+        font-size: 1.2em;
+    }
+}
+
+/* Estilos para o menu de navegação */
+nav#menu {
+    display: block;
+    background-color: var(--color-medium-gray);
+}
+
+/* Estilos para a lista de navegação */
+nav#menu ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+/* Ajustes responsivos para a navegação em telas extra pequenas */
+@media (max-width: 480px) {
+    nav#menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav#menu li {
+        margin-bottom: 5px;
+    }
+    nav#menu a {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para cada item da lista de navegação */
+nav#menu li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Estilos para os links de navegação */
+nav a {
+    color: var(--color-light-gray);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Efeito de hover para os links de navegação */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #2b3d4f;
+    color: var(--color-light-gray);
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+    margin: -10px;
+    margin-top: 10px;
+}
+
+/* Links de navegação no rodapé */
+nav.footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Define o comportamento de rolagem suave para o HTML */
+html {
+    scroll-behavior: smooth;
+}

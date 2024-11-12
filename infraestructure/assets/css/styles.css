@@ -1,122 +1,163 @@
-/* Define a cor de fundo da página como um tom claro */
-body {
-    background-color: #ecf0f1;
-}
+@import url(../css/global.css);
 
-/* Estilos para os links */
-a {
-    /* Remove o sublinhado dos links */
-    text-decoration: none;
-    /* Define a cor do texto como branco */
-    color: white;
-}
-
-/* Estiliza o título principal (h1) */
+/* Estiliza o título principal (h1)
 h1 {
-    color: white; /* Define a cor do texto como branco */
-    text-align: center; /* Centraliza o texto */
-    font-size: 2em; /* Define o tamanho da fonte como 2em */
-    font-family: Arial, Helvetica, sans-serif; /* Define uma lista de fontes */
-}
+    text-align: center; 
+    font-size: 2em; 
+    font-family: Arial, Helvetica, sans-serif;  
+}*/
 
-/* Estiliza parágrafos */
+/* Estiliza parágrafos 
 p {
-    text-align: center; /* Centraliza o texto */
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
-}
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; 
+}*/
 
-/* Estiliza a imagem da classe img_index */
+/* Estiliza a imagem da classe img_index
 .img_index {
-    display: block; /* Ocupa uma linha própria */
-    margin-left: auto; /* Centraliza horizontalmente */
+    display: block; 
+    margin-left: auto; 
     margin-right: auto;
-    width: 100%; /* Define a largura como 100% */
-}
+    width: 100%; 
+}*/
 
-header {
-    margin: -10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #2b3d4f;
-    color: white;
-}
-
-/* Estilos para a logo e o nome do sistema */
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 80px; /* Tamanho da logo */
-    margin: -10px;
-}
-
-.system-name {
-    font-size: 1.8em;
-    color: #fff;
-}
-
-/* Estilo do link de cadastro */
+/* Responsividade para o link de cadastro do usuário */
 .user-signup {
     color: #fff;
     text-decoration: none;
     padding: 10px 15px;
-    &:hover {
-        text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .user-signup {
+        padding: 8px 12px; /* Ajuste do padding em telas menores */
     }
 }
 
-/* Estilos para o menu de navegação */
-nav#menu {
-    display: block; /* Exibe itens em linha */
-    background-color: #95a5a6; /* Define uma cor de fundo cinza */
-    margin: -16px;
+@media (max-width: 480px) {
+    .user-signup {
+        padding: 6px 10px; /* Ajuste adicional em telas pequenas */
+    }
+}
+/* Estilos para a seção de introdução ou "hero" */
+section#hero {
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 40px 20px; /* Define o espaçamento interno */
+    background-color: var(--color-gray); /* Cor de fundo */
+    color: var(--color-light-gray); /* Cor do texto */
 }
 
-/* Estilos para a lista de navegação */
-nav#menu ul {
-    margin-left: -20px;
-    list-style-type: none; /* Remove marcadores da lista */
-    text-transform: uppercase;
+/* Estilos para o título na seção "hero" */
+section#hero h2 {
+    font-size: 32px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaço inferior */
+    color: var(--color-dark-blue); /* Cor do título */
 }
 
-/* Estilos para cada item da lista de navegação */
-nav#menu li {
-    display: inline-block;
-    margin-right: 10px;
+/* Estilos para o parágrafo na seção "hero" */
+section#hero p {
+    font-size: 18px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço inferior */
 }
 
-/* Estilos para os links da navegação */
-nav a {
-    color: white; /* Define a cor do texto como branco */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 12px; /* Define o tamanho da fonte */
-}
-
-/* Efeito de hover nos links de navegação */
-nav a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estilos para o título principal dentro do main */
-main h1 {
+/* Estilos para a seção de recursos ou "features" */
+section#features {
+    padding: 40px 20px; /* Espaçamento interno */
+    background-color: var(--color-medium-gray); /* Cor de fundo */
     text-align: center; /* Centraliza o texto */
-    font-size: 2em; /* Define o tamanho da fonte */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    color: black; /* Define a cor do texto como preto */
 }
 
-/* Estilos para o rodapé */
-footer {
-    background-color: #2b3d4f; /* Define uma cor de fundo escura */
-    color: white; /* Define a cor do texto como branco */
-    font-size: 10px; /* Define o tamanho da fonte */
-    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+/* Estilos para o título na seção "features" */
+section#features h3 {
+    font-size: 28px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estilos para o container de cartões de recurso */
+.feature-cards {
+    display: flex; /* Usa flexbox para os cartões */
+    flex-wrap: wrap; /* Permite que os cartões quebrem linha se necessário */
+    gap: 20px; /* Espaço entre os cartões */
+    justify-content: center; /* Centraliza os cartões */
+}
+
+/* Estilos para cada cartão individual */
+.card {
+    background-color: var(--color-gray); /* Cor de fundo do cartão */
+    padding: 70px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0); /* Sombra do cartão */
+    width: 250px; /* Largura fixa do cartão */
+}
+
+/* Estilos para o título dentro de cada cartão */
+.card h4 {
+    font-size: 20px; /* Tamanho da fonte */
+    color: var(--color-dark-blue); /* Cor do título */
+    margin-bottom: 10px; /* Espaço inferior */
+}
+
+/* Estilos para a seção de feedbacks */
+section#feedbacks {
+    padding: 40px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    background-color: var(--color-gray); /* Cor de fundo */
+}
+
+/* Estilos para o título na seção "feedbacks" */
+section#feedbacks h3 {
+    font-size: 28px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço inferior */
+    color: var(--color-dark-blue); /* Cor do título */
+}
+
+/* Estilos para cada feedback individual */
+.feedback {
+    margin: 15px auto; /* Espaço ao redor e centraliza horizontalmente */
+    max-width: 500px; /* Largura máxima */
+    background-color: var(--color-medium-gray); /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilos para o texto do feedback */
+.feedback p {
+    font-style: italic; /* Estilo itálico */
+}
+
+/* Estilos para o nome ou identificação do autor do feedback */
+.feedback span {
+    display: block; /* Exibe como bloco */
+    margin-top: 10px; /* Espaço superior */
+    font-weight: bold; /* Texto em negrito */
+    color: var(--color-light-blue); /* Cor do texto */
+}
+
+/* Estilos para a seção de call-to-action */
+section#call-to-action {
+    padding: 40px 20px; /* Espaçamento interno */
+    background-color: var(--color-medium-gray); /* Cor de fundo */
+    text-align: center; /* Centraliza o conteúdo */
+    color: var(--color-light-gray); /* Cor do texto */
+}
+
+/* Estilos para o título na seção "call-to-action" */
+section#call-to-action h3 {
+    font-size: 28px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaço inferior */
+    color: var(--color-dark-blue); /* Cor do título */
+}
+
+/* Estilos para o parágrafo na seção "call-to-action" */
+section#call-to-action p {
+    font-size: 18px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estilos para a seção de "voltar ao topo" */
+section#back-to-top {
+    background-color: var(--color-light-blue); /* Cor de fundo */
     text-align: center; /* Centraliza o texto */
     padding: 10px; /* Espaçamento interno */
-    margin: -10px;
-    margin-top: 10px; /* Espaçamento superior */
+    margin-bottom: -10px; /* Ajuste na margem inferior */
 }

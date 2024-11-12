@@ -1,0 +1,48 @@
+/* Importa o arquivo de estilo global */
+@import url(../../assets/css/global.css);
+
+/* Estilo principal para a tabela */
+.tg {
+    border-collapse: collapse; /* Remove espaços entre bordas */
+    border-spacing: 0; /* Define espaçamento entre células como 0 */
+}
+
+/* Estiliza as células de cabeçalho na classe .tg-0lax */
+.tg .tg-0lax th {
+    padding: 10px; /* Espaçamento interno */
+    color: var(--color-dark-blue); /* Cor do texto */
+    font-weight: bolder; /* Texto em negrito */
+}
+
+/* Estilos padrão para células e cabeçalhos da tabela */
+.tg td, th {
+    padding: 0 5px; /* Espaçamento interno horizontal */
+    color: var(--color-dark-blue); /* Cor do texto */
+    border-color: black; /* Cor da borda */
+    border-style: solid; /* Estilo de borda sólido */
+    border-width: 1px; /* Espessura da borda */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    font-size: 14px; /* Tamanho da fonte */
+    overflow: hidden; /* Oculta o conteúdo que excede */
+    word-break: normal; /* Quebra normal de palavras */
+    border-color: inherit; /* Inherit da cor da borda */
+    text-align: left; /* Alinha o texto à esquerda */
+    vertical-align: top; /* Alinha o conteúdo ao topo */
+}
+
+/* Estilo para botões dentro das células */
+.tg td button {
+    width: 100%; /* Botão ocupa a largura da célula */
+    border: none; /* Remove bordas do botão */
+    cursor: pointer; /* Mostra cursor de mão */
+}
+
+/* Efeito de hover para botões */
+.tg td button:hover {
+    background-color: #e4e4e4; /* Cor de fundo muda no hover */
+}
+
+/* Estilo para imagens dentro dos botões */
+.tg td button img {
+    width: 30px; /* Define largura da imagem */
+}

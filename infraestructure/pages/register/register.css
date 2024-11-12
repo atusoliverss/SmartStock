@@ -1,0 +1,174 @@
+/* Importa o arquivo de estilo global */
+@import url(../../assets/css/global.css);
+
+/* Estiliza o contêiner do formulário */
+.form-wrapper {
+    width: 400px; /* Largura fixa */
+    padding: 30px; /* Espaçamento interno */
+    background-color: var(--color-gray); /* Cor de fundo */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Media query para ajustar o formulário em telas pequenas */
+@media (max-width: 480px) {
+    .form-wrapper {
+        width: 100%; /* Formulário ocupa 100% da largura */
+    }
+}
+
+/* Estilos para o título principal do formulário */
+.form-wrapper h2 {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-transform: uppercase; /* Texto em letras maiúsculas */
+}
+
+/* Estilos para subtítulos (h3) */
+.form-wrapper h3 {
+    color: var(--color-gray-light); /* Cor do texto */
+    margin: 15px 0; /* Espaçamento vertical */
+    font-weight: 500; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto */
+    font-size: 22px; /* Tamanho da fonte */
+}
+
+/* Estilos para subtítulos menores (h4) */
+.form-wrapper h4 {
+    color: var(--color-gray-light);
+    margin: 15px 0;
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Estiliza grupos de campos do formulário */
+.form-group {
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+/* Estiliza rótulos de campo */
+.form-group label {
+    display: block; /* Exibe em linha separada */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    color: var(--color-dark-blue); /* Cor do texto */
+}
+
+/* Estilos para campos de entrada */
+.form-group input {
+    width: 100%; /* Ocupa a largura total do contêiner */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ffffff; /* Borda branca */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+/* Estilo para campo de entrada quando focado */
+.form-group input:focus {
+    border-color: #4A90E2; /* Cor da borda no foco */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilos para botão de envio */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff; /* Cor do texto */
+    background-color: #4A90E2; /* Cor de fundo */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Cursor de mão */
+}
+
+/* Efeito de hover para o botão de envio */
+.submit-btn:hover {
+    background-color: #003366; /* Muda a cor de fundo no hover */
+}
+
+/* Estiliza a seção de registro */
+#register {
+    margin: 0 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para o título de registro */
+#register h5 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Estilo para o botão na seção de registro */
+#register button {
+    border: #000000 1px solid; /* Borda preta */
+    background-color: var(--color-gray); /* Cor de fundo */
+    color: var(--color-dark-blue); /* Cor do texto */
+    width: 400px; /* Largura fixa */
+}
+
+/* Estilos para a lista de ícones de redes sociais */
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estilos para cada item na lista de redes sociais */
+.social li {
+    list-style: none; /* Remove marcadores de lista */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Formato circular */
+    margin: 0 7px; /* Espaçamento horizontal */
+    cursor: pointer;
+    transition: 0.3s; /* Transição suave */
+}
+
+/* Efeito de hover para ícones de redes sociais */
+.social li:hover {
+    background-color: #e4e4e4; /* Cor de fundo muda no hover */
+}
+
+/* Estilo para ícones de redes sociais */
+.social li img {
+    width: 40px; /* Tamanho da imagem */
+}
+
+/* Estilo para a seção de lembrar */
+.remember {
+    margin-bottom: 20px;
+    color: #32324f; /* Cor do texto */
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre elementos */
+}
+
+/* Estilo para links na seção de lembrar */
+.remember a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #4aa4ee; /* Cor do link */
+}
+
+/* Efeito de hover para links na seção de lembrar */
+.remember a:hover {
+    color: #3286ca; /* Cor do link no hover */
+}
+
+/* Estilo padrão para botões */
+button {
+    font-family: var(--font-primary); /* Fonte primária */
+    font-size: 1rem; /* Tamanho da fonte */
+    padding: var(--spacing-small) var(--spacing-medium); /* Espaçamento interno */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white; /* Cor do texto */
+    background-color: var(--color-light-blue); /* Cor de fundo */
+}
