@@ -1,11 +1,11 @@
-/* Define as margens, preenchimentos e box-sizing para todos os elementos e seus pseudoelementos */
+/* Define margens, preenchimentos e box-sizing para todos os elementos e pseudoelementos */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Define variáveis CSS globais para cores, fontes, e espaçamentos */
+/* Variáveis CSS para cores, fontes e espaçamentos */
 :root {
     --color-dark-blue: #2b3d4f;
     --color-light-blue: #3d566e;
@@ -13,189 +13,196 @@
     --color-light-gray: #ecf0f1;
     --color-medium-gray: #95a5a6;
     --color-blue: #3498DB;
-    
+
     --font-primary: 'Arial', sans-serif;
-    --font-size-base: 16px;
+    --font-size-base: 14px; /* Base menor para mobile */
 }
 
-/* Estilos globais para o corpo da página */
+/* Estilos globais para dispositivos móveis */
 body {
-    font-size: var(--font-size-base); /* Define o tamanho da fonte base */
-    color: white; /* Cor do texto */
-    background-color: var(--color-light-gray); /* Cor de fundo */
-    font-family: var(--font-primary); /* Fonte primária */
+    font-size: var(--font-size-base);
+    color: white;
+    background-color: var(--color-light-gray);
+    font-family: var(--font-primary);
 }
 
-/* Define a altura total para o corpo e o HTML e usa flexbox */
 body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* Estilos para o conteúdo principal */
 .content {
     flex: 1;
-    margin-bottom: -10px;
 }
 
 /* Estilo para o container centralizado */
 .container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
+    flex-direction: column; /* Exibe em coluna no mobile */
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Estilos para títulos */
+/* Títulos */
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: var(--color-dark-blue);
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: 10px;
 }
 
-/* Estilos para parágrafos */
+/* Parágrafos */
 p {
-    margin-bottom: var(--spacing-small);
+    margin-bottom: 10px;
     line-height: 1.6;
 }
 
-/* Estilos para links */
+/* Links */
 a {
     color: var(--color-light-gray);
     text-decoration: none;
 }
 
-/* Efeito de hover para links */
 a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para o cabeçalho */
+/* Cabeçalho */
 header {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column; /* Coluna no mobile */
     align-items: center;
-    padding: 5px;
-    background-color: #2b3d4f;
+    padding: 10px;
+    background-color: var(--color-dark-blue);
 }
 
-/* Estilos para o container da logo */
+/* Container da logo */
 div#logo-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* Estilo para o link da logo */
 div#logo-container a {
     text-decoration: none;
 }
 
-/* Estilo responsivo para a logo */
 .logo {
-    width: 80px;
+    width: 50px;
     margin: -5px;
 }
 
-/* Ajustes responsivos para a logo em telas menores */
-@media (max-width: 768px) {
-    .logo {
-        width: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        width: 50px;
-    }
-}
-
-/* Estilos para o nome do sistema */
 .system-name {
-    font-size: 1.8em;
-    color: #fff;
+    font-size: 1.4em;
+    color: var(--color-light-gray);
 }
 
-/* Ajustes responsivos para o nome do sistema em telas menores */
-@media (max-width: 768px) {
-    .system-name {
-        font-size: 1.5em;
-    }
-}
-
-@media (max-width: 480px) {
-    .system-name {
-        font-size: 1.2em;
-    }
-}
-
-/* Estilos para o menu de navegação */
+/* Menu de navegação */
 nav#menu {
     display: block;
     background-color: var(--color-medium-gray);
 }
 
-/* Estilos para a lista de navegação */
 nav#menu ul {
     list-style-type: none;
     text-transform: uppercase;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Coluna no mobile */
+    align-items: center;
 }
 
-/* Ajustes responsivos para a navegação em telas extra pequenas */
-@media (max-width: 480px) {
-    nav#menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav#menu li {
-        margin-bottom: 5px;
-    }
-    nav#menu a {
-        font-size: 14px;
-    }
-}
-
-/* Estilos para cada item da lista de navegação */
 nav#menu li {
-    display: inline-block;
-    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
-/* Estilos para os links de navegação */
-nav a {
+nav#menu a {
     color: var(--color-light-gray);
     text-decoration: none;
     font-size: 12px;
 }
 
-/* Efeito de hover para os links de navegação */
 nav a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para o rodapé */
+/* Rodapé */
 footer {
-    background-color: #2b3d4f;
+    background-color: var(--color-dark-blue);
     color: var(--color-light-gray);
     font-size: 10px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 10px;
-    margin: -10px;
-    margin-top: 10px;
 }
 
-/* Links de navegação no rodapé */
 nav.footer-links {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column; /* Coluna no mobile */
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Define o comportamento de rolagem suave para o HTML */
+/* Comportamento de rolagem suave */
 html {
     scroll-behavior: smooth;
+}
+
+/* Estilos para telas maiores que 480px (tablet) */
+@media (min-width: 481px) {
+    .container {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .system-name {
+        font-size: 1.6em;
+    }
+
+    nav#menu ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav#menu li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    nav.footer-links {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* Estilos para telas maiores que 768px (desktop) */
+@media (min-width: 769px) {
+    :root {
+        --font-size-base: 16px; /* Aumenta o tamanho base para desktop */
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .system-name {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav#menu li {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
 }

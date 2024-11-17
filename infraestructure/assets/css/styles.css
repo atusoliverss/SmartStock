@@ -1,163 +1,173 @@
 @import url(../css/global.css);
 
-/* Estiliza o título principal (h1)
-h1 {
-    text-align: center; 
-    font-size: 2em; 
-    font-family: Arial, Helvetica, sans-serif;  
-}*/
+/* Base para dispositivos móveis */
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
+    --font-size-xlarge: 28px;
+}
 
-/* Estiliza parágrafos 
-p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif; 
-}*/
-
-/* Estiliza a imagem da classe img_index
-.img_index {
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto;
-    width: 100%; 
-}*/
-
-/* Responsividade para o link de cadastro do usuário */
 .user-signup {
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 6px 10px; /* Padding inicial menor para mobile */
 }
 
-@media (max-width: 768px) {
-    .user-signup {
-        padding: 8px 12px; /* Ajuste do padding em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .user-signup {
-        padding: 6px 10px; /* Ajuste adicional em telas pequenas */
-    }
-}
-/* Estilos para a seção de introdução ou "hero" */
 section#hero {
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 40px 20px; /* Define o espaçamento interno */
-    background-color: var(--color-gray); /* Cor de fundo */
-    color: var(--color-light-gray); /* Cor do texto */
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-gray);
+    color: var(--color-light-gray);
 }
 
-/* Estilos para o título na seção "hero" */
 section#hero h2 {
-    font-size: 32px; /* Tamanho da fonte */
-    margin-bottom: 10px; /* Espaço inferior */
-    color: var(--color-dark-blue); /* Cor do título */
+    font-size: var(--font-size-xlarge);
+    margin-bottom: 10px;
+    color: var(--color-dark-blue);
 }
 
-/* Estilos para o parágrafo na seção "hero" */
 section#hero p {
-    font-size: 18px; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Espaço inferior */
+    font-size: var(--font-size-medium);
+    margin-bottom: 20px;
 }
 
-/* Estilos para a seção de recursos ou "features" */
 section#features {
-    padding: 40px 20px; /* Espaçamento interno */
-    background-color: var(--color-medium-gray); /* Cor de fundo */
-    text-align: center; /* Centraliza o texto */
+    padding: 20px;
+    background-color: var(--color-medium-gray);
+    text-align: center;
 }
 
-/* Estilos para o título na seção "features" */
 section#features h3 {
-    font-size: 28px; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Espaço inferior */
+    font-size: var(--font-size-large);
+    margin-bottom: 20px;
 }
 
-/* Estilos para o container de cartões de recurso */
 .feature-cards {
-    display: flex; /* Usa flexbox para os cartões */
-    flex-wrap: wrap; /* Permite que os cartões quebrem linha se necessário */
-    gap: 20px; /* Espaço entre os cartões */
-    justify-content: center; /* Centraliza os cartões */
+    display: flex;
+    flex-direction: column; /* Coluna para mobile */
+    gap: 20px;
+    justify-content: center;
 }
 
-/* Estilos para cada cartão individual */
 .card {
-    background-color: var(--color-gray); /* Cor de fundo do cartão */
-    padding: 70px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0); /* Sombra do cartão */
-    width: 250px; /* Largura fixa do cartão */
+    background-color: var(--color-gray);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-/* Estilos para o título dentro de cada cartão */
 .card h4 {
-    font-size: 20px; /* Tamanho da fonte */
-    color: var(--color-dark-blue); /* Cor do título */
-    margin-bottom: 10px; /* Espaço inferior */
+    font-size: var(--font-size-medium);
+    color: var(--color-dark-blue);
+    margin-bottom: 10px;
 }
 
-/* Estilos para a seção de feedbacks */
 section#feedbacks {
-    padding: 40px 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o conteúdo */
-    background-color: var(--color-gray); /* Cor de fundo */
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-gray);
 }
 
-/* Estilos para o título na seção "feedbacks" */
 section#feedbacks h3 {
-    font-size: 28px; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Espaço inferior */
-    color: var(--color-dark-blue); /* Cor do título */
+    font-size: var(--font-size-large);
+    margin-bottom: 20px;
+    color: var(--color-dark-blue);
 }
 
-/* Estilos para cada feedback individual */
 .feedback {
-    margin: 15px auto; /* Espaço ao redor e centraliza horizontalmente */
-    max-width: 500px; /* Largura máxima */
-    background-color: var(--color-medium-gray); /* Cor de fundo */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
+    margin: 15px auto;
+    max-width: 100%;
+    background-color: var(--color-medium-gray);
+    padding: 20px;
+    border-radius: 8px;
 }
 
-/* Estilos para o texto do feedback */
 .feedback p {
-    font-style: italic; /* Estilo itálico */
+    font-style: italic;
 }
 
-/* Estilos para o nome ou identificação do autor do feedback */
 .feedback span {
-    display: block; /* Exibe como bloco */
-    margin-top: 10px; /* Espaço superior */
-    font-weight: bold; /* Texto em negrito */
-    color: var(--color-light-blue); /* Cor do texto */
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-light-blue);
 }
 
-/* Estilos para a seção de call-to-action */
 section#call-to-action {
-    padding: 40px 20px; /* Espaçamento interno */
-    background-color: var(--color-medium-gray); /* Cor de fundo */
-    text-align: center; /* Centraliza o conteúdo */
-    color: var(--color-light-gray); /* Cor do texto */
+    padding: 20px;
+    background-color: var(--color-medium-gray);
+    text-align: center;
+    color: var(--color-light-gray);
 }
 
-/* Estilos para o título na seção "call-to-action" */
 section#call-to-action h3 {
-    font-size: 28px; /* Tamanho da fonte */
-    margin-bottom: 10px; /* Espaço inferior */
-    color: var(--color-dark-blue); /* Cor do título */
+    font-size: var(--font-size-large);
+    margin-bottom: 10px;
+    color: var(--color-dark-blue);
 }
 
-/* Estilos para o parágrafo na seção "call-to-action" */
 section#call-to-action p {
-    font-size: 18px; /* Tamanho da fonte */
-    margin-bottom: 20px; /* Espaço inferior */
+    font-size: var(--font-size-medium);
+    margin-bottom: 20px;
 }
 
-/* Estilos para a seção de "voltar ao topo" */
 section#back-to-top {
-    background-color: var(--color-light-blue); /* Cor de fundo */
-    text-align: center; /* Centraliza o texto */
-    padding: 10px; /* Espaçamento interno */
-    margin-bottom: -10px; /* Ajuste na margem inferior */
+    background-color: var(--color-light-blue);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Ajustes para telas médias (tablet) */
+@media (min-width: 481px) {
+    .user-signup {
+        padding: 8px 12px;
+    }
+
+    .feature-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+/* Ajustes para telas grandes (desktop) */
+@media (min-width: 769px) {
+    .user-signup {
+        padding: 10px 15px;
+    }
+
+    section#hero {
+        padding: 40px;
+    }
+
+    section#features {
+        padding: 40px;
+    }
+
+    section#features h3, section#feedbacks h3, section#call-to-action h3 {
+        font-size: 32px;
+    }
+
+    .feature-cards {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 250px;
+        padding: 70px;
+    }
+
+    section#feedbacks {
+        padding: 40px;
+    }
+
+    section#call-to-action {
+        padding: 40px;
+    }
 }

@@ -3,46 +3,73 @@
 
 /* Estilo principal para a tabela */
 .tg {
-    border-collapse: collapse; /* Remove espaços entre bordas */
-    border-spacing: 0; /* Define espaçamento entre células como 0 */
+    border-collapse: collapse;
+    width: 100%; /* Tabela ocupa 100% da largura para telas menores */
+    font-size: 12px; /* Tamanho de fonte reduzido para telas pequenas */
+    border-spacing: 0;
 }
 
-/* Estiliza as células de cabeçalho na classe .tg-0lax */
-.tg .tg-0lax th {
-    padding: 10px; /* Espaçamento interno */
-    color: var(--color-dark-blue); /* Cor do texto */
-    font-weight: bolder; /* Texto em negrito */
+/* Estilos para células de cabeçalho e corpo da tabela */
+.tg td, .tg th {
+    padding: 0 5px;
+    border: 1px solid var(--color-dark-blue); /* Define borda escura */
+    color: var(--color-dark-blue);
+    font-family: Arial, sans-serif;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
 }
 
-/* Estilos padrão para células e cabeçalhos da tabela */
-.tg td, th {
-    padding: 0 5px; /* Espaçamento interno horizontal */
-    color: var(--color-dark-blue); /* Cor do texto */
-    border-color: black; /* Cor da borda */
-    border-style: solid; /* Estilo de borda sólido */
-    border-width: 1px; /* Espessura da borda */
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    font-size: 14px; /* Tamanho da fonte */
-    overflow: hidden; /* Oculta o conteúdo que excede */
-    word-break: normal; /* Quebra normal de palavras */
-    border-color: inherit; /* Inherit da cor da borda */
-    text-align: left; /* Alinha o texto à esquerda */
-    vertical-align: top; /* Alinha o conteúdo ao topo */
+/* Estilo para cabeçalhos */
+.tg th {
+    padding:5px; /* Menor espaçamento para telas menores */
+    background-color: var(--color-medium-gray); /* Cor de fundo para cabeçalho */
+    font-weight: bold;
 }
 
-/* Estilo para botões dentro das células */
+/* Botões dentro das células */
 .tg td button {
     width: 100%; /* Botão ocupa a largura da célula */
-    border: none; /* Remove bordas do botão */
-    cursor: pointer; /* Mostra cursor de mão */
+    border: none;
+    cursor: pointer;
 }
 
-/* Efeito de hover para botões */
+/* Efeito hover para botões */
 .tg td button:hover {
-    background-color: #e4e4e4; /* Cor de fundo muda no hover */
+    background-color: #e4e4e4;
 }
 
-/* Estilo para imagens dentro dos botões */
+/* Imagens dentro dos botões */
 .tg td button img {
-    width: 30px; /* Define largura da imagem */
+    width: 20px; /* Tamanho reduzido para dispositivos móveis */
+}
+
+/* Ajustes para tablets e desktops */
+@media (min-width: 481px) {
+    .tg {
+        font-size: 14px; /* Tamanho de fonte maior */
+    }
+
+    /* Ajustes para botões em telas maiores */
+    .tg td button {
+        padding: 8px;
+    }
+
+    /* Ajuste do tamanho das imagens em botões */
+    .tg td button img {
+        width: 25px;
+    }
+}
+
+@media (min-width: 769px) {
+    .tg {
+        width: auto; /* Centraliza a tabela se houver espaço */
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Ajuste final para imagens */
+    .tg td button img {
+        width: 30px; /* Imagem em tamanho completo para desktops */
+    }
 }
