@@ -9,44 +9,48 @@
 </head>
 <body>
     <!-- Deixa o footer fixado no fundo da pagina independente do conteudo -->
-    <div class="content">
-        <header>
-            <div id="logo-container">
+    <header class="bg-dark justify-content-center py-2">
+        <div class="container-md d-flex justify-content-center align-items-center">
+            <div class="d-flex align-items-center">
                 <!-- Imagem do logotipo -->
                 <img class="logo" src="../../assets/images/logo_icon.png" alt="logo do sistema">
-                <!-- Nome do site com um link para a página inicial -->
-                <span class="system-name"><a href="../infraestructure/index.html">SmartStock</a></span>
-                <!-- Lista não ordenada para opções de login e cadastro -->
+                <h1 class="h2 m-0 me-3">
+                    <a href="../../index.html" class="text-light text-decoration-none">SmartStock</a>
+                </h1>
             </div>
-        </header>
+        </div>
+    </header>
         
-        <!-- Menu de navegação principal do site -->
-        <nav id="menu">
-            <ul>
-                <li>
-                    <a href="#" target="_self" rel="prev">Produtos</a>
+    <!-- Menu de navegação principal do site -->
+    <nav class="bg-secondary text-light">
+        <div class="container-sm">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" target="_self" rel="prev">Produtos</a>
                 </li>
-                <li>
-                    <a href="#" target="_self" rel="prev">Categorias</a>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" target="_self" rel="prev">Categorias</a>
                 </li>
-                <li>
-                    <a href="#" target="_self" rel="prev">Fornecedores</a>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" target="_self" rel="prev">Fornecedores</a>
                 </li>
-                <li>
-                    <a href="#" target="_self" rel="prev">Movimentações</a>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" target="_self" rel="prev">Movimentações</a>
                 </li>
-                <li>
-                    <a href="#" target="_self" rel="prev">relatorios</a>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" target="_self" rel="prev">Relatorios</a>
                 </li>
             </ul>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Conteúdo principal -->
-        <main class="container">
-            <!-- Tabela de Usuarios -->
-            <table class="tg">
-                <!-- Cabecalho da tabela -->
-                <thead>
+    <!-- Conteúdo principal -->
+    <main class="container py-5">
+        <!-- Tabela de Usuários -->
+        <div class=" table-responsive my-5">
+            <table class="table table-striped table-hover text-center align-middle">
+                <!-- Cabeçalho da Tabela -->
+                <thead class="table-dark">
                     <tr>
                         <th>NOME</th>
                         <th>EMAIL</th>
@@ -54,19 +58,19 @@
                         <th>EXCLUIR</th>
                     </tr>
                 </thead>
-                <!-- Corpo da tabela -->
+                <!-- Corpo da Tabela -->
                 <tbody>
                     <tr>
                         <td>Lucas Pereira</td>
                         <td>lucas.pereira@example.com</td>
                         <td>
-                            <button type="button">
-                                <img src="../../assets/images/editar-texto.png" alt="">
+                            <button class="btn btn-warning btn-sm">
+                                <img src="../../assets/images/editar-texto.png" alt="Editar" class="img-fluid" style="width: 20px;">
                             </button>
                         </td>
                         <td>
-                            <button>
-                                <img src="../../assets/images/excluir.png" alt="">
+                            <button class="btn btn-danger btn-sm">
+                                <img src="../../assets/images/excluir.png" alt="Excluir" class="img-fluid" style="width: 20px;">
                             </button>
                         </td>
                     </tr>
@@ -74,13 +78,13 @@
                         <td>Fernanda Souza</td>
                         <td>fernanda.souza@example.com</td>
                         <td>
-                            <button type="button">
-                                <img src="../../assets/images/editar-texto.png" alt="">
+                            <button class="btn btn-warning btn-sm">
+                                <img src="../../assets/images/editar-texto.png" alt="Editar" class="img-fluid" style="width: 20px;">
                             </button>
                         </td>
                         <td>
-                            <button>
-                                <img src="../../assets/images/excluir.png" alt="">
+                            <button class="btn btn-danger btn-sm">
+                                <img src="../../assets/images/excluir.png" alt="Excluir" class="img-fluid" style="width: 20px;">
                             </button>
                         </td>
                     </tr>
@@ -88,29 +92,42 @@
                         <td>Roberto Lima</td>
                         <td>roberto.lima@example.com</td>
                         <td>
-                            <button type="button">
-                                <img src="../../assets/images/editar-texto.png" alt="">
+                            <button class="btn btn-warning btn-sm">
+                                <img src="../../assets/images/editar-texto.png" alt="Editar" class="img-fluid" style="width: 20px;">
                             </button>
                         </td>
                         <td>
-                            <button>
-                                <img src="../../assets/images/excluir.png" alt="">
+                            <button class="btn btn-danger btn-sm">
+                                <img src="../../assets/images/excluir.png" alt="Excluir" class="img-fluid" style="width: 20px;">
                             </button>
                         </td>
                     </tr>
-              </tbody>
-              </table>
-        </main>
-    </div>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
 
-    <!-- Rodapé com links de apoio -->
-    <footer>
-        <p>&copy; 2024 SmartStock - Todos os direitos reservados.</p>
-        <nav class="footer-links">
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos de Uso</a>
-            <a href="#">Suporte</a>
-            <a href="#">Contato</a>
+    <!-- Rodapé -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p class="mb-3">&copy; 2024 SmartStock - Todos os direitos reservados.</p>
+        <nav class="d-flex">
+            <div class="container-sm">
+                <ul class="nav justify-content-around">
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Política de Privacidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Termos de Uso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </footer>
 </body>

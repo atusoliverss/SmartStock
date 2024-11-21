@@ -1,11 +1,6 @@
-/* Define margens, preenchimentos e box-sizing para todos os elementos e pseudoelementos */
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url(../css/bootstrap/bootstrap.css);
 
-/* Variáveis CSS para cores, fontes e espaçamentos */
+/* Variáveis CSS para cores e fontes */
 :root {
     --color-dark-blue: #2b3d4f;
     --color-light-blue: #3d566e;
@@ -18,48 +13,33 @@
     --font-size-base: 14px; /* Base menor para mobile */
 }
 
-/* Estilos globais para dispositivos móveis */
-body {
-    font-size: var(--font-size-base);
-    color: white;
-    background-color: var(--color-light-gray);
-    font-family: var(--font-primary);
+.bg-dark{
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-light-gray) !important;
 }
 
-body, html {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.bg-light{
+    background-color: var(--color-gray) !important;
 }
 
-.content {
-    flex: 1;
+.bg-secondary{
+    background-color: var(--color-medium-gray) !important;
 }
 
-/* Estilo para o container centralizado */
-.container {
-    display: flex;
-    flex-direction: column; /* Exibe em coluna no mobile */
-    gap: 20px;
-    padding: 20px;
+.bg-primary{
+    background-color: var(--color-light-blue) !important;
 }
 
-/* Títulos */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    color: var(--color-dark-blue);
-    margin-bottom: 10px;
+.text-light{
+    color: var(--color-light-gray) !important;
 }
-
-/* Parágrafos */
-p {
-    margin-bottom: 10px;
-    line-height: 1.6;
+.text-dark{
+    color: var(--color-dark-blue) !important;
 }
 
 /* Links */
 a {
-    color: var(--color-light-gray);
+    color: var(--color-light-gray) !important;
     text-decoration: none;
 }
 
@@ -67,142 +47,18 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Cabeçalho */
-header {
-    display: flex;
-    flex-direction: column; /* Coluna no mobile */
-    align-items: center;
-    padding: 10px;
-    background-color: var(--color-dark-blue);
-}
-
-/* Container da logo */
-div#logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div#logo-container a {
-    text-decoration: none;
-}
-
 .logo {
     width: 50px;
     margin: -5px;
 }
 
-.system-name {
-    font-size: 1.4em;
-    color: var(--color-light-gray);
-}
-
-/* Menu de navegação */
-nav#menu {
-    display: block;
-    background-color: var(--color-medium-gray);
-}
-
-nav#menu ul {
-    list-style-type: none;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column; /* Coluna no mobile */
-    align-items: center;
-}
-
-nav#menu li {
-    margin-bottom: 5px;
-}
-
-nav#menu a {
-    color: var(--color-light-gray);
-    text-decoration: none;
-    font-size: 12px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--color-dark-blue);
-    color: var(--color-light-gray);
-    font-size: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding: 10px;
-}
-
-nav.footer-links {
-    display: flex;
-    flex-direction: column; /* Coluna no mobile */
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-/* Comportamento de rolagem suave */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Estilos para telas maiores que 480px (tablet) */
-@media (min-width: 481px) {
-    .container {
-        flex-direction: row;
-        gap: 30px;
-    }
-
-    .logo {
-        width: 60px;
-    }
-
-    .system-name {
-        font-size: 1.6em;
-    }
-
-    nav#menu ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    nav#menu li{
-        display: inline-block;
-        margin-right: 10px;
-    }
-
-    nav.footer-links {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
-
 /* Estilos para telas maiores que 768px (desktop) */
 @media (min-width: 769px) {
     :root {
-        --font-size-base: 16px; /* Aumenta o tamanho base para desktop */
+        --font-size-base: 16px;
     }
 
     .logo {
         width: 80px;
-    }
-
-    .system-name {
-        font-size: 1.8em;
-    }
-
-    .container {
-        padding: 40px;
-    }
-
-    header {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    nav#menu li {
-        margin-right: 10px;
-        margin-bottom: 0;
     }
 }

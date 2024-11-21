@@ -3,86 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../register/register.css">
     <link rel="shortcut icon" href="../../assets/images/logo_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../register/register.css">
     <title>Login in StockSmart</title>
 </head>
 <body>
     <!-- Deixa o footer fixado no fundo da pagina independente do conteudo -->
-    <div class="content">
-        <header>
-            <div id="logo-container">
+    <header class="bg-dark justify-content-center py-2">
+        <div class="container-md d-flex justify-content-center align-items-center">
+            <div class="d-flex align-items-center">
                 <!-- Imagem do logotipo -->
                 <img class="logo" src="../../assets/images/logo_icon.png" alt="logo do sistema">
-                <!-- Nome do site com um link para a página inicial -->
-                <span class="system-name"><a href="../infraestructure/index.html">SmartStock</a></span>
-                <!-- Lista não ordenada para opções de login e cadastro -->
+                <h1 class="h2 m-0 me-3">
+                    <a href="../../index.html" class="text-light text-decoration-none">SmartStock</a>
+                </h1>
             </div>
-        </header>
+        </div>
+    </header>
         
-        <!-- Menu de navegação principal do site -->
-        <nav id="menu">
-            <ul>
-                <li>
-                    <a href="../../index.html" target="_self" rel="prev">voltar</a>
+    <!-- Menu de navegação principal do site -->
+    <nav class="bg-secondary text-light">
+        <div class="container-sm">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="../../index.html" target="_self" rel="prev">voltar</a>
                 </li>
             </ul>
-        </nav>
-        <!-- Conteúdo principal -->
-        <main class="container">
-            <div class="form-wrapper">
-                <h2>Login</h2>
+        </div>
+    </nav>
+    <!-- Conteúdo principal -->
+        
+    <main class="container py-5">
+        <div class="card mx-auto shadow-lg rounded-3" style="max-width: 400px;">
+            <div class="card-body bg-light rounded-3">
+                <h2 class="card-title text-center mb-4">Login</h2>
                 <!-- Formulário de login -->
-                <form action="../home/home.html" >
-                    <div class="form-group">
-                        <label for="login-email">Email:</label>
-                        <input type="email" id="login-email" name="email" required placeholder="@mail.com">
+                <form action="../home/home.html">
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label">Email:</label>
+                        <input type="email" id="login-email" name="email" class="form-control" required placeholder="@mail.com">
                     </div>
-                    <div class="form-group">
-                        <label for="login-password">Senha:</label>
-                        <input type="password" id="login-password" name="password" required placeholder="password" min="6" max="18" pattern=".{8,}" title="A senha deve ter entre 6 e 18 caracteres">
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Senha:</label>
+                        <input type="password" id="login-password" name="password" class="form-control" required placeholder="Senha" pattern=".{6,18}" title="A senha deve ter entre 6 e 18 caracteres">
                     </div>
-                    <div class="remember">
-                        <label>
-                            <input type="checkbox" id="remember-me" name="remember-me">Lembre-se de mim                     
-                        </label>
-                        <a href="#">Esqueceu a Senha?</a>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="form-check">
+                            <input type="checkbox" id="remember-me" name="remember-me" class="form-check-input">
+                            <label for="remember-me" class="form-check-label">Lembre-se de mim</label>
+                        </div>
+                        <a href="#" class="text-decoration-none text-primary">Esqueceu a Senha?</a>
                     </div>
-                    <button type="submit" class="submit-btn">Entrar</button>
+                    <button type="submit" class="btn btn-primary w-100">Entrar</button>
                 </form>
-                <h3>Logar com</h3>
-                <!-- Redes sociais para login -->
-                <ul class="social">
-                    <li>
-                        <img src="../../assets/images/google.png" alt="google">
+                <div class="text-center my-4">
+                    <h5>Ou logar com</h5>
+                    <!-- Redes sociais para login -->
+                    <div class="d-flex justify-content-center gap-3 mt-3">
+                        <img src="../../assets/images/google.png" alt="Google" class="rounded-circle px-2 py-2" style="width: 50px; height: 50px;">
+                        <img src="../../assets/images/facebook.png" alt="Facebook" class="rounded-circle px-2 py-2" style="width: 50px; height: 50px;">
+                        <img src="../../assets/images/apple.png" alt="Apple" class="rounded-circle px-2 py-2" style="width: 50px; height: 50px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Link para a página de cadastro -->
+    <section class="text-center pb-5">
+        <h5>Ainda não possui uma conta?</h5>
+        <a href="../register/cadastro.html" class="btn bg-light text-dark px-5 mt-2">Cadastre-se</a>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p class="mb-3">&copy; 2024 SmartStock - Todos os direitos reservados.</p>
+        <nav class="d-flex">
+            <div class="container-sm">
+                <ul class="nav justify-content-around">
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Política de Privacidade</a>
                     </li>
-                    <li>
-                        <img src="../../assets/images/facebook.png" alt="google">
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Termos de Uso</a>
                     </li>
-                    <li>
-                        <img src="../../assets/images/apple.png" alt="google">
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Contato</a>
                     </li>
                 </ul>
             </div>
-        </main>
-        
-        <!-- Link para a página de cadastro -->
-        <section id="register">
-            <h5>Ainda não possui uma conta?</h5>
-            <a href="../register/cadastro.html" target="_self" rel="next">
-                <button type="button">Cadastre-se</button>
-            </a>
-        </section>
-    </div>
-
-    <!-- Rodapé com links de apoio -->
-    <footer>
-        <p>&copy; 2024 SmartStock - Todos os direitos reservados.</p>
-        <nav class="footer-links">
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos de Uso</a>
-            <a href="#">Suporte</a>
-            <a href="#">Contato</a>
         </nav>
     </footer>
 </body>
