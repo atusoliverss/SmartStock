@@ -30,6 +30,10 @@
     background-color: var(--color-light-blue) !important;
 }
 
+.bg-body{
+    background-color: var(--color-light-gray) !important;
+}
+
 .text-light{
     color: var(--color-light-gray) !important;
 }

@@ -1,2 +1,7 @@
 /* Importa o arquivo de estilo global */
 @import url(../../assets/css/global.css);
+
+ 
+.user > img{
+    background-color: #e4e4e4;
+}

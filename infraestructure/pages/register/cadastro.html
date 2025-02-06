@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/logo_icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../register/register.css">
+    <script type="text/javascript" src="../../assets/js/addUser.js"></script>
     <title>Registro no StockSmart</title>
 </head>
 <body>
@@ -44,10 +45,14 @@
                 </div>
                 <h4 class="text-center mb-4">ou use seu email para registro</h4>
                 <!-- Formulário de cadastro -->
-                <form action="../home/home.html">
+                <form action="http://localhost:8080/users/save" method="POST" id="signup-form">
                     <div class="mb-3">
                         <label for="signup-name" class="form-label">Nome:</label>
                         <input type="text" id="signup-name" name="name" class="form-control" required placeholder="Seu nome completo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signup-login" class="form-label">Login:</label>
+                        <input type="text" id="signup-login" name="login" class="form-control" required placeholder="@mail.com">
                     </div>
                     <div class="mb-3">
                         <label for="signup-email" class="form-label">Email:</label>

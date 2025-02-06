@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/logo_icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../register/register.css">
+    <script text="text/javascript" src="../../assets/js/findUserByLoginAndPassword.js"></script>
+    <script text="text/javascript" src="../../assets/js/apisExternas.js"></script>
+    <script text="text/javascript" src="../../assets/js/rememberMeForgotPassword.js"></script>
     <title>Login in StockSmart</title>
 </head>
 <body>
@@ -38,10 +41,10 @@
             <div class="card-body bg-light rounded-3">
                 <h2 class="card-title text-center mb-4">Login</h2>
                 <!-- Formulário de login -->
-                <form action="../home/home.html">
+                <form action="http://localhost:8080/users/findbyloginandpassword" method="POST" id="singin-form">
                     <div class="mb-3">
-                        <label for="login-email" class="form-label">Email:</label>
-                        <input type="email" id="login-email" name="email" class="form-control" required placeholder="@mail.com">
+                        <label for="singin-login" class="form-label">Login:</label>
+                        <input type="text" id="singin-login" name="login" class="form-control" required placeholder="Seu login">
                     </div>
                     <div class="mb-3">
                         <label for="login-password" class="form-label">Senha:</label>
